@@ -104,7 +104,7 @@
           <button class="btn" onclick="btnClicked(this)">L</button>
         </div>
         <div class="keys-row3">
-          <button class="enter" #enter onclick="btnClicked(this)">ENTER</button>
+          <button class="enter" #enter onclick="enterPress()">ENTER</button>
           <button class="btn" onclick="btnClicked(this)">Z</button>
           <button class="btn" onclick="btnClicked(this)">X</button>
           <button class="btn" onclick="btnClicked(this)">C</button>
@@ -116,7 +116,7 @@
             class="btn"
             class="btn-bp"
             #bp
-            onclick="btnClicked(this)"
+            onclick="backspace()"
             style="width: 4rem"
           >
             <img src="../assets/icons/backspace.svg" alt="" class="backspace" />
