@@ -33,85 +33,92 @@
         </div>
       </nav>
       <hr />
+      <div class="word" #word></div>
       <wrapper class="game">
         <div class="row1" #row>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
+          <div class="box"><span class="letter" id="l11"></span></div>
+          <div class="box"><span class="letter" id="l12"></span></div>
+          <div class="box"><span class="letter" id="l13"></span></div>
+          <div class="box"><span class="letter" id="l14"></span></div>
+          <div class="box"><span class="letter" id="l15"></span></div>
         </div>
         <div class="row2" #row>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
+          <div class="box"><span class="letter" id="l21"></span></div>
+          <div class="box"><span class="letter" id="l22"></span></div>
+          <div class="box"><span class="letter" id="l23"></span></div>
+          <div class="box"><span class="letter" id="l24"></span></div>
+          <div class="box"><span class="letter" id="l25"></span></div>
         </div>
         <div class="row3" #row>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
+          <div class="box"><span class="letter" id="l31"></span></div>
+          <div class="box"><span class="letter" id="l32"></span></div>
+          <div class="box"><span class="letter" id="l33"></span></div>
+          <div class="box"><span class="letter" id="l34"></span></div>
+          <div class="box"><span class="letter" id="l35"></span></div>
         </div>
         <div class="row4" #row>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
+          <div class="box"><span class="letter" id="l41"></span></div>
+          <div class="box"><span class="letter" id="l42"></span></div>
+          <div class="box"><span class="letter" id="l43"></span></div>
+          <div class="box"><span class="letter" id="l44"></span></div>
+          <div class="box"><span class="letter" id="l45"></span></div>
         </div>
         <div class="row5" #row>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
+          <div class="box"><span class="letter" id="l51"></span></div>
+          <div class="box"><span class="letter" id="l52"></span></div>
+          <div class="box"><span class="letter" id="l53"></span></div>
+          <div class="box"><span class="letter" id="l54"></span></div>
+          <div class="box"><span class="letter" id="l55"></span></div>
         </div>
         <div class="row6" #row>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
-          <div class="box"><span class="letter">A</span></div>
+          <div class="box"><span class="letter" id="l61"></span></div>
+          <div class="box"><span class="letter" id="l62"></span></div>
+          <div class="box"><span class="letter" id="l63"></span></div>
+          <div class="box"><span class="letter" id="l64"></span></div>
+          <div class="box"><span class="letter" id="l65"></span></div>
         </div>
       </wrapper>
 
       <wrapper class="keyboard">
         <div class="keys-row1">
-          <button class="btn">Q</button>
-          <button class="btn">W</button>
-          <button class="btn">E</button>
-          <button class="btn">R</button>
-          <button class="btn">T</button>
-          <button class="btn">Y</button>
-          <button class="btn">U</button>
-          <button class="btn">I</button>
-          <button class="btn">O</button>
-          <button class="btn">P</button>
+          <button class="btn" onclick="btnClicked(this)">Q</button>
+          <button class="btn" onclick="btnClicked(this)">W</button>
+          <button class="btn" onclick="btnClicked(this)">E</button>
+          <button class="btn" onclick="btnClicked(this)">R</button>
+          <button class="btn" onclick="btnClicked(this)">T</button>
+          <button class="btn" onclick="btnClicked(this)">Y</button>
+          <button class="btn" onclick="btnClicked(this)">U</button>
+          <button class="btn" onclick="btnClicked(this)">I</button>
+          <button class="btn" onclick="btnClicked(this)">O</button>
+          <button class="btn" onclick="btnClicked(this)">P</button>
         </div>
         <div class="keys-row2">
-          <button class="btn">A</button>
-          <button class="btn">S</button>
-          <button class="btn">D</button>
-          <button class="btn">F</button>
-          <button class="btn">G</button>
-          <button class="btn">H</button>
-          <button class="btn">J</button>
-          <button class="btn">K</button>
-          <button class="btn">L</button>
+          <button class="btn" onclick="btnClicked(this)">A</button>
+          <button class="btn" onclick="btnClicked(this)">S</button>
+          <button class="btn" onclick="btnClicked(this)">D</button>
+          <button class="btn" onclick="btnClicked(this)">F</button>
+          <button class="btn" onclick="btnClicked(this)">G</button>
+          <button class="btn" onclick="btnClicked(this)">H</button>
+          <button class="btn" onclick="btnClicked(this)">J</button>
+          <button class="btn" onclick="btnClicked(this)">K</button>
+          <button class="btn" onclick="btnClicked(this)">L</button>
         </div>
         <div class="keys-row3">
-          <button class="enter">ENTER</button>
-          <button class="btn">Z</button>
-          <button class="btn">X</button>
-          <button class="btn">C</button>
-          <button class="btn">V</button>
-          <button class="btn">B</button>
-          <button class="btn">N</button>
-          <button class="btn">M</button>
-          <button class="bp">
+          <button class="enter" #enter onclick="btnClicked(this)">ENTER</button>
+          <button class="btn" onclick="btnClicked(this)">Z</button>
+          <button class="btn" onclick="btnClicked(this)">X</button>
+          <button class="btn" onclick="btnClicked(this)">C</button>
+          <button class="btn" onclick="btnClicked(this)">V</button>
+          <button class="btn" onclick="btnClicked(this)">B</button>
+          <button class="btn" onclick="btnClicked(this)">N</button>
+          <button class="btn" onclick="btnClicked(this)">M</button>
+          <button
+            class="btn"
+            class="btn-bp"
+            #bp
+            onclick="btnClicked(this)"
+            style="width: 4rem"
+          >
             <img src="../assets/icons/backspace.svg" alt="" class="backspace" />
           </button>
         </div>

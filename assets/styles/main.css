@@ -16,7 +16,9 @@
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 1.3rem 1rem 1.3rem;
+  margin: 1rem 1.3rem 0.4rem 1.3rem;
+  width: auto;
+  height: 4rem;
 }
 
 .toggle-menu button {
@@ -38,6 +40,8 @@ nav {
   font-size: 2rem;
   margin-left: 17rem;
   font-family: "DM Serif Display", serif;
+  width: auto;
+  height: 4rem;
 }
 
 .interaction {
@@ -85,6 +89,30 @@ nav {
   margin: auto;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  height: 0rem;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  z-index: 1;
+  color: white;
+  background-color: black;
+  width: 3.5rem;
+  height: 2.5rem;
+  border-radius: 3px;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform margin-top 0.4s, top 0.4s;
+}
+
+.show-word {
+  margin-top: 5rem;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
 }
 
 .game {
@@ -167,20 +195,54 @@ button {
   height: 3rem;
   background-color: #d1d1d1e0;
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.btn {
+  transition: ease;
+}
+
+.btn:active {
+  background-color: #7a7a7ae0;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .enter {
   width: 4rem;
   font-size: 0.7rem;
 }
-.bp {
-  width: 4rem;
+.enter:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.enter:active {
+  background-color: #5db383;
 }
 
 .backspace {
   width: 1.2rem;
   height: 1.2rem;
+}
+.bspace {
+  display: none;
+}
+
+.correct {
+  background-color: #5db383;
+  color: white;
+}
+
+.incorrect-pos {
+  color: white;
+  background-color: #cfd87be0;
+}
+
+.incorrect-letter {
+  color: white;
+  background-color: #aaaaaae0;
 }
