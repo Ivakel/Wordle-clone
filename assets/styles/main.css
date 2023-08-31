@@ -101,6 +101,8 @@ nav {
   z-index: 1;
   color: white;
   background-color: black;
+  margin-left: 3.7rem;
+
   width: 3.5rem;
   height: 2.5rem;
   border-radius: 3px;
@@ -110,8 +112,8 @@ nav {
 }
 
 .show-word {
-  margin-top: 5rem;
-  transform: translate(-55%, -50%) scale(1);
+  margin-top: 6rem;
+  transform: translate(-50%, -50%) scale(1);
   visibility: visible;
 }
 

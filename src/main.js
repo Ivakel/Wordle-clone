@@ -4,6 +4,7 @@ let game = [
   ["", "", "", "", ""],
   ["", "", "", "", ""],
   ["", "", "", "", ""],
+  ["", "", "", "", ""],
 ];
 
 const word = "needs";
@@ -129,8 +130,8 @@ function reduceWord() {
 }
 function increaseWord(letter) {
   currWord += letter;
-
   col++;
+  console.log(row);
   game[row][col] = letter;
 }
 
@@ -147,7 +148,6 @@ function backspace() {
 //for the device keyboard
 document.body.addEventListener("keyup", (ev) => {
   const letter = ev.key.toLowerCase();
-  console.log(letter);
 
   if (letter === "backspace") {
     backspace();
