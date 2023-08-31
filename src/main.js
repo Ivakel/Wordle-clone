@@ -65,7 +65,7 @@ let allWords = new Set([
 
 function showWord() {
   const wordBox = document.getElementById("word");
-  wordBox.innerText = word.toUpperCase;
+  wordBox.innerText = word.toUpperCase();
   wordBox.classList.add("show-word");
 }
 
@@ -86,17 +86,16 @@ function enterPress() {
 
       for (let i = 0; i < 5; i++) {
         const letterBox = document.getElementById(`l${row + 1}${i + 1}`);
-        if (currWord[col] === word[col]) {
+        if (currWord[i] === word[i]) {
           //Correct Letter in the correct pos
           letterBox.classList.add("correct");
+        } else if (wordSet.has(currWord[i])) {
+          //correct letter, incorrect pos
+
+          letterBox.classList.add("incorrect-pos");
         } else {
-          if (wordSet.has(currWord[col])) {
-            //correct letter, incorrect pos
-            letterBox.classList.add("incorrect-pos");
-          } else {
-            //incorrect letter
-            letterBox.classList.add("incorrect-letter");
-          }
+          //incorrect letter
+          letterBox.classList.add("incorrect-letter");
         }
       }
       if (currWord === word) {
@@ -104,12 +103,15 @@ function enterPress() {
         gameOver();
         return;
       }
+
+      currWord = "";
+      col = -1;
+      row++;
       if (row === 6) {
         //you've lost the game
         lost();
+        return;
       }
-      currWord = "";
-      row++;
     } else {
       return;
     }
@@ -145,19 +147,20 @@ function backspace() {
 //for the device keyboard
 document.body.addEventListener("keyup", (ev) => {
   const letter = ev.key.toLowerCase();
+  console.log(letter);
 
   if (letter === "backspace") {
     backspace();
     return;
   }
 
-  if (!validInput.has(letter)) {
-    return;
-  }
-
   //if enter is pressed
+
   if (letter === "enter") {
     enterPress();
+    return;
+  }
+  if (!validInput.has(letter)) {
     return;
   }
   //the row is full
