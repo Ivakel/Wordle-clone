@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  height: 3.4rem;
+}
+
+.title {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif HK", serif;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.email-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-top: 2.1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: flex;
+
+  justify-content: center;
+  width: 20rem;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.submit-btn {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+}

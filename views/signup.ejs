@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle clone | signup</title>
+    <link href="/styles/signup.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">Play Wordle Everyday</div>
+      </div>
+      <hr />
+      <div class="email-signup">
+        <div class="account">Log in or create an account</div>
+        <form action="/auth/signup" method="post">
+          <div class="input-box">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="input-box">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required />
+          </div>
+          <input
+            class="submit-btn"
+            type="submit"
+            id="submit"
+            value="Continue"
+            onclick="submit(this)"
+          />
+        </form>
+        <p class="or">OR</p>
+        <hr />
+        <p class="terms">
+          By continuing, you agree to the updated <a href="#">Terms of Sale</a>,
+          <a href="#">Terms of Service</a>, and <a href="#">Privacy Policy</a>.
+        </p>
+
+        <div class="google-login">Continue with Google</div>
+      </div>
+    </div>
+  </body>
+</html>

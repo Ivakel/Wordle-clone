@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "wordle-clone",
   "version": "1.0.0",
   "description": "",
@@ -23,7 +22,7 @@
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
     "mongodb": "^5.8.1",
-    "mongoose": "^7.4.5",
+    "mongoose": "^7.5.0",
     "nodemon": "^3.0.1",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
