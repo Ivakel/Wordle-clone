@@ -10,7 +10,7 @@ app.use(express.static(__dirname + "/assets"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs");
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
