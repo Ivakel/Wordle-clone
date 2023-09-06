@@ -121,6 +121,7 @@ a {
   border: 1px solid black;
   border-radius: 5px;
   background-color: whitesmoke;
+  font-size: 1rem;
 }
 
 .google-login:hover {
