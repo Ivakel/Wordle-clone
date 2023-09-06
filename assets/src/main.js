@@ -72,10 +72,16 @@ function showWord() {
 
 function gameOver() {
   showWord();
+  module.exports = () => {
+    return game;
+  };
 }
 
 function lost() {
   showWord();
+  module.exports = () => {
+    return game;
+  };
 }
 
 function enterPress() {

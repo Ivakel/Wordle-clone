@@ -11,12 +11,18 @@ const flash = require("express-flash");
 const session = require("express-session");
 
 const app = express();
+let game = null;
+
+const getGame = async () => {
+  const gg = require("./assets/src/main");
+  game = gg();
+};
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/assets"));
 
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs");
