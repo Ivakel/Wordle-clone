@@ -28,6 +28,7 @@ passport.use(
       //do
 
       User.findOne({ googleID: profile.id }).then((existingUser) => {
+        console.log("googles");
         if (existingUser) {
           //cookie save
           console.log("existing user is", existingUser);

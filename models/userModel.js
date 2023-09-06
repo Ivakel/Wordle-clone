@@ -17,6 +17,9 @@ const UserSchema = new mongoose.Schema(
     googleID: {
       type: String,
     },
+    todaysGame: {
+      type: Array,
+    },
   },
 
   {

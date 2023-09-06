@@ -19,7 +19,6 @@ function initialise(passport) {
             done(null, newUser);
           });
       } else {
-        console.log("found", existingUser);
         try {
           if (await bcrypt.compare(password, existingUser.password)) {
             done(null, existingUser);

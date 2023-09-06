@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/assets"));
+app.use(express.static(__dirname + "/public"));
 
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs");
@@ -45,10 +45,21 @@ app.get("/auth/signup", (req, res) => {
 });
 
 app.get(
+  "/auth/google",
+  passport.authenticate("google", {
+    scope: ["profile"],
+  })
+);
+
+// app.get("/auth/google", (req, res) => {
+//   res.render("signup.ejs");
+// });
+
+app.get(
   "/auth/google/redirect",
   passport.authenticate("google"),
   (req, res) => {
-    res.redirect("/", { user: user });
+    res.redirect("/");
   }
 );
 
