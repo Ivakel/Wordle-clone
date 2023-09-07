@@ -8,7 +8,6 @@ let game = [
 ];
 
 const word = "needs";
-const wordSet = new Set(word);
 
 let row = 0;
 let col = -1;
@@ -72,16 +71,12 @@ function showWord() {
 
 function gameOver() {
   showWord();
-  module.exports = () => {
-    return game;
-  };
+  saveGame();
 }
 
 function lost() {
   showWord();
-  module.exports = () => {
-    return game;
-  };
+  saveGame();
 }
 
 function enterPress() {
@@ -105,6 +100,7 @@ function enterPress() {
           letterBox.classList.add("incorrect-letter");
         }
       }
+
       if (currWord === word) {
         //the game is over
         gameOver();

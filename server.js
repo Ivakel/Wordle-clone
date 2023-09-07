@@ -46,7 +46,7 @@ app.get("/", checkAuthentication, (req, res) => {
   res.render("index.ejs", { user: req.user });
 });
 
-app.get("/auth/signup", (req, res) => {
+app.get("/auth/signup", checkNotAuthentication, (req, res) => {
   res.render("signup.ejs");
 });
 
@@ -56,10 +56,6 @@ app.get(
     scope: ["profile"],
   })
 );
-
-// app.get("/auth/google", (req, res) => {
-//   res.render("signup.ejs");
-// });
 
 app.get(
   "/auth/google/redirect",
@@ -83,7 +79,6 @@ function checkAuthentication(req, res, next) {
   if (req.isAuthenticated()) {
     next();
   } else {
-    console.log("this");
     res.redirect("/auth/signup");
   }
 }
@@ -95,6 +90,7 @@ function checkNotAuthentication(req, res, next) {
     next();
   }
 }
+//hey
 
 //starting the server and connecting to the database
 mongoose.set("strictQuery", false);

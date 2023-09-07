@@ -6,6 +6,7 @@ const User = require("../models/userModel");
 
 //serializing the user
 passport.serializeUser((user, done) => {
+  console.log("this");
   done(null, user.id);
 });
 
@@ -32,6 +33,7 @@ passport.use(
         if (existingUser) {
           //cookie save
           console.log("existing user is", existingUser);
+
           done(null, existingUser);
         } else {
           new User({
@@ -41,6 +43,7 @@ passport.use(
             .save()
             .then((newUser) => {
               console.log("created: " + newUser);
+
               done(null, newUser);
             });
         }
