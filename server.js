@@ -56,7 +56,7 @@ app.get(
   "/auth/google/redirect",
   passport.authenticate("google"),
   (req, res) => {
-    res.redirect("/");
+    res.render("/", { user: req.user });
   }
 );
 
