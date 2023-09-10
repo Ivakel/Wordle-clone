@@ -37,7 +37,7 @@ initialisePassport(passport);
 
 //GET ROUTES
 app.get("/", checkAuthentication, (req, res) => {
-  res.render("index.ejs", { user: req.user });
+  res.render("index.ejs");
   // res.send("molo mhlaba");
 });
 
