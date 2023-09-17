@@ -126,7 +126,12 @@ nav {
   font-size: 2.8rem;
 }
 
-.row1 {
+div #row {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+/* .row1 {
   display: flex;
   justify-content: center;
   gap: 0.3rem;
@@ -160,7 +165,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 0.3rem;
-}
+} */
 .box {
   /* display: flex; */
   align-items: center;

@@ -36,7 +36,7 @@ app.use(flash());
 initialisePassport(passport);
 
 //GET ROUTES
-app.get("/", checkAuthentication, (req, res) => {
+app.get("/", (req, res) => {
   res.render("index.ejs");
   // res.send("molo mhlaba");
 });
@@ -88,10 +88,14 @@ function checkNotAuthentication(req, res, next) {
 //hey
 
 //starting the server and connecting to the database
+// app.listen(port, () => {
+//   console.log(`Server running on port ${port}`);
+// });
 mongoose.set("strictQuery", false);
 mongoose
   .connect(
-    `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@tictactoeapi.e1ttns0.mongodb.net/TicTacToeAPI?retryWrites=true&w=majority`
+    // `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@wordle.8ga5h7d.mongodb.net/Wordle?retryWrites=true&w=majority`
+    "mongodb+srv://ivakeledlabom88:UnaSte44@wordle.8ga5h7d.mongodb.net/Wordle?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("Connected to MongoDB");
