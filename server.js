@@ -36,7 +36,7 @@ app.use(flash());
 initialisePassport(passport);
 
 //GET ROUTES
-app.get("/", (req, res) => {
+app.get("/", checkAuthentication, (req, res) => {
   res.render("index.ejs");
   // res.send("molo mhlaba");
 });
