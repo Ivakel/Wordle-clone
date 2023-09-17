@@ -95,7 +95,7 @@ mongoose.set("strictQuery", false);
 mongoose
   .connect(
     // `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@wordle.8ga5h7d.mongodb.net/Wordle?retryWrites=true&w=majority`
-    "mongodb+srv://ivakeledlabom88:UnaSte44@wordle.8ga5h7d.mongodb.net/Wordle?retryWrites=true&w=majority"
+    process.env.MONGODB_URL
   )
   .then(() => {
     console.log("Connected to MongoDB");
