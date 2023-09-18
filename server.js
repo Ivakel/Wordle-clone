@@ -84,23 +84,13 @@ function checkNotAuthentication(req, res, next) {
     next();
   }
 }
-//hey
 
-//starting the server and connecting to the database
-// app.listen(port, () => {
-//   console.log(`Server running on port ${port}`);
-// });
+//connect to the database and listen to the server
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(
-    // `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@wordle.8ga5h7d.mongodb.net/Wordle?retryWrites=true&w=majority`
-    process.env.MONGODB_URL
-  )
+  .connect(process.env.MONGODB_URL)
   .then(() => {
-    console.log("Connected to MongoDB");
-    app.listen(port, () => {
-      console.log(`Server running on port ${port}`);
-    });
+    app.listen(port, () => {});
   })
   .catch((error) => {
     console.log(error);
