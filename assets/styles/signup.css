@@ -107,9 +107,9 @@ a {
 .thirdplogins {
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  align-self: center;
   width: 20rem;
-  margin-left: 38.5%;
 }
 
 .google-login {
@@ -137,5 +137,11 @@ a {
   height: 3rem;
 }
 .agreement {
+  display: inline;
+  justify-content: center;
+
   margin-bottom: 2rem;
+  width: 20rem;
+  font-size: 0.9rem;
 }
+
