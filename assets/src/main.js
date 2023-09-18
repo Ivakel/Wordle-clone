@@ -5776,11 +5776,11 @@ let allWords = new Set([
 ]);
 
 //random word
-function getRandomItem() {
-  let items = Array.from(allWords);
-  return items[Math.floor(Math.random() * items.length)];
+function getRandomWord() {
+  let words = Array.from(allWords);
+  return words[Math.floor(Math.random() * items.length)];
 }
-const word = getRandomItem();
+const word = getRandomWord();
 const wordSet = new Set(word);
 
 //show the word
