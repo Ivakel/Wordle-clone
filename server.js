@@ -51,13 +51,9 @@ app.get(
   })
 );
 
-app.get(
-  "/auth/google/redirect",
-  passport.authenticate("google"),
-  (req, res) => {
-    res.redirect("/");
-  }
-);
+app.get("/auth/google/redirect", (req, res) => {
+  res.redirect("/");
+});
 
 //POST ROUTES
 app.post(
